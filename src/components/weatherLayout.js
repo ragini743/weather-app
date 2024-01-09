@@ -6,4 +6,4 @@ const weatherLayout = () => {
   )
 }
 
-export default weatherLayout
+export default weatherLayout ;

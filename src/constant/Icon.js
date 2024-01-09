@@ -1,4 +1,5 @@
-export const searchIcon = "https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png" ;
+export const searchIcon = "https://upload.wikimedia.org/wikipedia/commons/f/f5/Search-icon-white-background.png" ;
+
 export const clearIcon = "https://cdn.iconscout.com/icon/free/png-256/free-clear-1780599-1513754.png" ;
 
 export const cloudIcon="https://cdn-icons-png.flaticon.com/512/3222/3222791.png";

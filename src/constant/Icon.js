@@ -2,7 +2,7 @@ export const searchIcon = "https://upload.wikimedia.org/wikipedia/commons/f/f5/S
 
 export const clearIcon = "https://cdn.iconscout.com/icon/free/png-256/free-clear-1780599-1513754.png" ;
 
-export const cloudIcon="https://static.vecteezy.com/system/resources/thumbnails/023/258/081/small_2x/weather-icon-sun-and-cloud-icon-png.png";
+export const cloudIcon="https://openweathermap.org/img/wn/{}@2x.png";
 
 export const drizzleIcon ="https://cdn3d.iconscout.com/3d/premium/thumb/drizzle-weather-7096832-5753008.png" ;
 

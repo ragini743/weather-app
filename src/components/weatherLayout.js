@@ -6,13 +6,14 @@ import { useEffect,useState } from 'react';
 
 const WeatherLayout = () => {
   
-    const [weatherData,setWeatherData] = useState([0]);
-    console.log("weatherData",weatherData)
+    const [weatherData,setWeatherData] = useState(0);
+    
+    
   return (
     <div className='bg-indigo-800
      text-white py-8 sm:w-[80%] md:w-[60%] mx-auto h-full px-12 md:py-10 max-w-md'>
         <SearchContainer weatherData={weatherData} setWeatherData={setWeatherData} />
-        <WeatherReport />
+        <WeatherReport weatherData={weatherData}/>
      </div>
   )
     

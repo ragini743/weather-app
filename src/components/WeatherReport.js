@@ -1,23 +1,40 @@
 import React from "react";
 import { cloudIcon, humidityIcon, windIcon } from "../constant/Icon";
 
-const WeatherReport = ({weatherData}) => {
-    // console.log("weatherData",weatherData)
-   
-    // const {temp} = weatherData.main.temp;
-    // console.log("temp",temp)
+const WeatherReport = ({ weatherData }) => {
+  console.log(weatherData);
+  if (weatherData === 0) {
+    return null;
+  }
+  const { main, name, wind, weather } = weatherData;
+ 
+  const icon = weather[0].icon;
+  const description =  weather[0].description
+
+  const img_URL = `https://openweathermap.org/img/wn/${icon}@2x.png` ;
+  console.log(img_URL)
+
+  const { temp, humidity } = main;
+  const { speed } = wind;
+ 
+  const temp1 = (temp - 273.15).toFixed(1);
+
   return (
     <div className="pt-10">
-      <div className="weather-image">
-        <img src={cloudIcon} alt="cloud-icon"></img>
+      <div className="weather-image w-100%">
+        <img
+          src={img_URL
+        }
+          alt={description}
+        ></img>
       </div>
       <div>
         <h1 className="weather-temp text-center text-[2.5rem] font-bold">
-          24&#8451;
+          {temp1}&#8451;
         </h1>
       </div>
       <div className="location">
-        <h1 className="text-center font-bold md:text-[1.5rem]">London</h1>
+        <h1 className="text-center font-bold md:text-[1.5rem]">{name}</h1>
       </div>
       <div className="flex justify-between items-center pt-5">
         <div className="flex flex-col w-[50%]">
@@ -27,7 +44,7 @@ const WeatherReport = ({weatherData}) => {
               <img src={humidityIcon} alt="humidity-icon"></img>
             </div>
 
-            <p>64%</p>
+            <p>{humidity}%</p>
           </div>
           <p>humidity</p>
         </div>
@@ -38,7 +55,7 @@ const WeatherReport = ({weatherData}) => {
               <img src={windIcon} alt="wind-icon"></img>
             </div>
 
-            <p>18km/h</p>
+            <p>{speed * (3.6).toFixed(1)}km/h</p>
           </div>
           <p>wind</p>
         </div>

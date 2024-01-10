@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { searchIcon } from "../constant/Icon";
-import { a, weather_API } from "../constant/key";
+import { a} from "../constant/key";
 
 const SearchContainer = ({ weatherData, setWeatherData }) => {
   const [searchInput, setSearchInput] = useState("");
 
-  // console.log("weatherDData",weatherData)
   const getWeatherData = async () => {
+
     const data = await fetch(a + searchInput);
     const json = await data.json();
-    // console.log("json",json);
+ 
     setWeatherData(json);
   };
 
@@ -31,6 +31,7 @@ const SearchContainer = ({ weatherData, setWeatherData }) => {
         className="w-[10%]"
         onClick={() => {
           getWeatherData() 
+          setSearchInput("")
                }}
       >
         <img src={searchIcon} alt="search-icon"></img>

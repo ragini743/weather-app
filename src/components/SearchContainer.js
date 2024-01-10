@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { searchIcon } from "../constant/Icon";
 import { a} from "../constant/key";
 
 const SearchContainer = ({ weatherData, setWeatherData }) => {
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState("allahabad");
 
   const getWeatherData = async () => {
 
@@ -12,6 +12,10 @@ const SearchContainer = ({ weatherData, setWeatherData }) => {
  
     setWeatherData(json);
   };
+
+  useEffect(()=>{
+getWeatherData()
+  },[searchInput])
 
   return (
     <div className="flex justify-evenly">
@@ -27,15 +31,7 @@ const SearchContainer = ({ weatherData, setWeatherData }) => {
         ></input>
       </div>
 
-      <div
-        className="w-[10%]"
-        onClick={() => {
-          getWeatherData() 
-          setSearchInput("")
-               }}
-      >
-        <img src={searchIcon} alt="search-icon"></img>
-      </div>
+      
     </div>
   );
 };

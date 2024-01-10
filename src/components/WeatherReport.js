@@ -3,25 +3,26 @@ import { cloudIcon, humidityIcon, windIcon } from "../constant/Icon";
 
 const WeatherReport = ({ weatherData }) => {
   console.log(weatherData);
-  if (weatherData === 0) {
-    return null;
+  if (!weatherData||!weatherData.weather|| weatherData.length===null) {
+    return <h1 className="pt-6 font-bold text-lg">data not found 
+    </h1>;
   }
   const { main, name, wind, weather } = weatherData;
  
-  const icon = weather[0].icon;
-  const description =  weather[0].description
+  const icon = weather[0]?.icon;
+  const description =  weather[0]?.description
 
   const img_URL = `https://openweathermap.org/img/wn/${icon}@2x.png` ;
-  console.log(img_URL)
+  // console.log(img_URL)
 
   const { temp, humidity } = main;
   const { speed } = wind;
  
   const temp1 = (temp - 273.15).toFixed(1);
-
+ 
   return (
     <div className="pt-10">
-      <div className="weather-image w-100%">
+      <div className="weather-image flex justify-center">
         <img
           src={img_URL
         }

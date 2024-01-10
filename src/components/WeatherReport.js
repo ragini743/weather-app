@@ -1,7 +1,11 @@
 import React from "react";
 import { cloudIcon, humidityIcon, windIcon } from "../constant/Icon";
 
-const WeatherReport = () => {
+const WeatherReport = ({weatherData}) => {
+    // console.log("weatherData",weatherData)
+   
+    // const {temp} = weatherData.main.temp;
+    // console.log("temp",temp)
   return (
     <div className="pt-10">
       <div className="weather-image">

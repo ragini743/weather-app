@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react";
 
-import { a} from "../constant/key";
+import { a } from "../constant/key";
 
 const SearchContainer = ({ weatherData, setWeatherData }) => {
   const [searchInput, setSearchInput] = useState("allahabad");
 
   const getWeatherData = async () => {
-
     const data = await fetch(a + searchInput);
     const json = await data.json();
- 
+
     setWeatherData(json);
   };
 
-  useEffect(()=>{
-getWeatherData();
-  },[searchInput])
+  useEffect(() => {
+    getWeatherData();
+  }, [searchInput]);
 
   return (
     <div className="flex justify-evenly">
@@ -30,8 +29,6 @@ getWeatherData();
           }}
         ></input>
       </div>
-
-      
     </div>
   );
 };

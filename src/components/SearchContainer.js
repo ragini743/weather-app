@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { searchIcon } from "../constant/Icon";
+
 import { a} from "../constant/key";
 
 const SearchContainer = ({ weatherData, setWeatherData }) => {
@@ -14,7 +14,7 @@ const SearchContainer = ({ weatherData, setWeatherData }) => {
   };
 
   useEffect(()=>{
-getWeatherData()
+getWeatherData();
   },[searchInput])
 
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { cloudIcon, humidityIcon, windIcon } from "../constant/Icon";
+import {  humidityIcon, windIcon } from "../constant/Icon";
 
 const WeatherReport = ({ weatherData }) => {
   console.log(weatherData);

@@ -1,8 +1,8 @@
 import React from 'react'
 import SearchContainer from './SearchContainer';
 import WeatherReport from './WeatherReport';
-// import { a, weather_API } from '../constant/key';
-import { useEffect,useState } from 'react';
+
+import { useState } from 'react';
 
 const WeatherLayout = () => {
   

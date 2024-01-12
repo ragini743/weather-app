@@ -1,4 +1,4 @@
-import WeatherLayout from "./components/weatherLayout";
+import WeatherLayout from "./components/WeatherLayout";
 
 function App() {
   return (

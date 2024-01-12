@@ -1,5 +1,5 @@
-import WeatherLayout from "src/components/WeatherLayout";
-// import WeatherLayout from "./components/Weather";
+import WeatherLayout from "./components/WeatherLayout";
+// import WeatherLayout from "./components/WeatherLayout";
 
 function App() {
   return (

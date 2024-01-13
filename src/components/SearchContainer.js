@@ -16,7 +16,7 @@ const SearchContainer = ({ weatherData, setWeatherData }) => {
       if (searchInput !== "") {
         getWeatherData();
       }
-    }, 300);
+    }, 200);
 
     return () => {
       clearTimeout(timer);

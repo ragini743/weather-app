@@ -2,13 +2,13 @@ import React from "react";
 import {  humidityIcon, windIcon } from "../constant/Icon";
 
 const WeatherReport = ({ weatherData }) => {
-  console.log(weatherData);
+  console.log("sdfghn",weatherData)
   if (!weatherData||!weatherData.weather|| weatherData.length===null) {
     return <h1 className="pt-6 font-bold text-lg">data not found 
     </h1>;
   }
   const { main, name, wind, weather } = weatherData;
- 
+ console.log("weatherData.name",name)
   const icon = weather[0]?.icon;
   const description =  weather[0]?.description
 

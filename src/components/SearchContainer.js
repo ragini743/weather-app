@@ -8,12 +8,19 @@ const SearchContainer = ({ weatherData, setWeatherData }) => {
   const getWeatherData = async () => {
     const data = await fetch(a + searchInput);
     const json = await data.json();
-
     setWeatherData(json);
   };
 
   useEffect(() => {
-    getWeatherData();
+    const timer = setTimeout(() => {
+      if (searchInput !== "") {
+        getWeatherData();
+      }
+    }, 300);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [searchInput]);
 
   return (

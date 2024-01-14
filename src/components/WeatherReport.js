@@ -56,7 +56,7 @@ const WeatherReport = ({ weatherData }) => {
               <img src={windIcon} alt="wind-icon"></img>
             </div>
 
-            <p>{speed * (3.6).toFixed(1)}km/h</p>
+            <p>{(speed * (3.6)).toFixed(1)}km/h</p>
           </div>
           <p>wind</p>
         </div>

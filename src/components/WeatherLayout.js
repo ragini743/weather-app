@@ -9,8 +9,9 @@ const WeatherLayout = () => {
 
   return (
     <div
-      className="bg-indigo-600
-   text-white py-8 sm:w-[80%] md:w-[60%] mx-auto h-full px-12 md:py-10 max-w-md rounded-3xl border-gray-300 border-2  shadow-2xl"
+      className="
+   text-white bg-blue-400 py-8 sm:w-[80%] md:w-[60%] mx-auto h-full px-12 md:py-10 max-w-md rounded-3xl border-gray-300 border-2  shadow-2xl" 
+ 
     >
       <SearchContainer
         weatherData={weatherData}
